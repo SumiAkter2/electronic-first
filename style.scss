@@ -49,7 +49,7 @@ body{
 @mixin flex-content{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: 20px;
 }
 // brand logo
@@ -64,7 +64,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #272727;
-    height: 600px;
+    height: 100%;
     width: 100%;
     padding: 20px 0;
     transform:(skew(0deg, 3deg));
@@ -72,6 +72,7 @@ body{
 
     .content {
        transform:(skew(0deg, -3deg));
+       margin-top: 50px
     }
         // ******************main section*************
         main {
@@ -202,11 +203,12 @@ body{
     padding: 0px 30px;
 
     .nav-item {
-
         @include flex-content;
         flex-direction: column;
         row-gap: 20px;
 
+       // drop-drown item
+    
         .top-nav-item {
             @include flex-content;
 
@@ -219,18 +221,16 @@ body{
         .main-nav-item {
             @include flex-content;
             @include nav-item;
+            align-items: center;
+            
 
-            div {
+            ul {
                 @include flex-content;
+                align-items: center;
                 padding: 0px 40px;
-                .dropdown-item
-                .dropdown-item div{
-                    display: grid;
-                }
-                .dropdown-item div button img {
-                        width: 20px;
-                    }
+               
             }
+            
 
             button {
                 @include searchButton;
@@ -239,9 +239,6 @@ body{
             li a {
                 @include flex-content;
                 gap: 5px;
-
-               
-               
             }
 
             i {
@@ -251,6 +248,14 @@ body{
         }
     }
 
+        .dropdown-item {
+            display: flex;
+        // background: #;
+        background-image: linear-gradient(to right,#2d3e43,#686662);
+          
+        }
+
+//  link item
     div li {
         list-style: none
     }
@@ -262,6 +267,17 @@ body{
 
 }
 
+ 
+// hover:
+.navbar-content .nav-item .main-nav-item ul li:hover .dropdown-item{
+   display: none;
+   
+}
+
+.icon-img{
+    width: 30px;
+    border-radius: 100%;
+}
 
 //trending section
 .trending-section{
