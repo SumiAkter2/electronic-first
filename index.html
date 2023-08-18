@@ -5,8 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="/public/icon-1024.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Electronic First</title>  
-
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- scss link -->
     <link rel="stylesheet" href="style.scss">
   </head>
@@ -18,27 +16,38 @@
      <section class="content">
       <nav >
         <div class="navbar-content">
+          <!-- brand logo -->
           <a href="/" class="brand-logo">
                   <img src="/public/img/brand-logo.png" alt="Brand-logo">
                 </a>
-
+     <!-- nav -item -->
                 <div class="nav-item">
-                  <!-- top nav -->
+      <!-- top nav -->
                   <div class="top-item">
                    <li><a href="/">Trending</a></li>
                    <li><a href="/">Pre-orders</a></li>
                    <li><a href="/">Upcoming</a></li>
                    <li><a href="/">Support 24/7</a></li>
                   </div>
+                  <!-- main item -->
                   <div class="main-item">
-                    <li><a href="/"><i class="fa-solid fa-desktop"></i> PC</a></li>
-                    <li><a href="/"><i class="fa-brands fa-playstation"></i> Playstation</a></li>
-                    <li><a href="/"> <i class="fa-brands fa-xbox"></i>Xbox</a></li>
-                    <li><a href="/"><i class="fa-solid fa-gamepad"></i> Nintendo</a></li>
+                   
+                    <div>
+                      <li><a href="/"><i class="fa-solid fa-desktop icon"></i> PC <i class="fa-solid fa-angle-down"></i></a></li>
+                      <li><a href="/"><i class="fa-brands fa-playstation"></i> Playstation <i class="fa-solid fa-angle-down"></i></a></li>
+                      <li><a href="/"> <i class="fa-brands fa-xbox"></i>Xbox <i class="fa-solid fa-angle-down"></i></a></li>
+                      <li><a href="/"><i class="fa-solid fa-gamepad"></i> Nintendo <i class="fa-solid fa-angle-down"></i></a></li>
+                    </div>
+                   
+                    
+                      <button class="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                   
                   </div>
                 </div>
-       <div class="icon">
-      <i class="fa-solid fa-cart-shopping" style="font-size: 25px;"></i>
+       <div >
+      <i class="fa-solid fa-cart-shopping" style="font-size: 25px; padding-right: 20px;"></i>
     <i class="fa-regular fa-user" style="font-size: 25px; color:	#0096FF"></i>
        </div>
         </div>
