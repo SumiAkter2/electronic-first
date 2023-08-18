@@ -1,7 +1,3 @@
-// import javascriptLogo from "./javascript.svg";
-// import viteLogo from "/vite.svg";
-// import { setupCounter } from "./counter.js";
-
 // document.querySelector("#app").innerHTML = `
 //   <div>
 //     <a href="https://vitejs.dev" target="_blank">
@@ -21,3 +17,28 @@
 // `;
 
 // setupCounter(document.querySelector("#counter"));
+
+console.log("from  main.js ");
+
+function loadProduct() {
+  const url = "product.json";
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      data.forEach((product) => {
+        console.log(product);
+        `   
+    <div class="card">
+   <img src="" alt="product-img">
+   <button class="badge">${product.badge}</button>
+   <div class="card-text">
+    <h4>${product.Description}</h4>
+    <p> euro</p>
+   </div>
+   </div>
+   `;
+      });
+    });
+}
+document.getElementById("trending-cards").innerHTML = product;
+loadProduct();

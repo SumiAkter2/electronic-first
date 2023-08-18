@@ -3,6 +3,7 @@ $fontColor:#fff;
 $skew-amount: 4deg;
 $primaryFont:35px;
 $topNavItemColor: #d1d1d1;
+$primaryBg:#272727;
 :root {
     font-family: poppins;
     color: $fontColor;
@@ -12,7 +13,13 @@ $topNavItemColor: #d1d1d1;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
+body{
+    background: $primaryBg;
+}
+
+
 @mixin nav-item{
    font-size: 15px;
    background-image: linear-gradient(to right,#0a1419,#2f3d47);
@@ -26,6 +33,14 @@ $topNavItemColor: #d1d1d1;
     border-radius: 100%;
     border: 0;
     color: $fontColor;
+}
+@mixin button{
+        color: $fontColor;
+        cursor: pointer;
+        background: rgba(128, 128, 128, 0.546);
+        font-weight: 600;
+        border-radius: 6px;
+        border: 0;
 }
 @mixin icon {
     font-size: 15px;
@@ -48,7 +63,8 @@ $topNavItemColor: #d1d1d1;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-color: #272727;
+    height: 600px;
     width: 100%;
     padding: 20px 0;
     transform:(skew(0deg, 3deg));
@@ -61,16 +77,14 @@ $topNavItemColor: #d1d1d1;
         main {
             @include flex-content;
             justify-content: center;
+            align-items: end;
             transform: (skew(0deg, -3deg));
             padding: 50px 100px;
 
     .top-badge{
-        color: $fontColor;
+       @include button;
         padding: 5px 10px;
-        background: rgba(128, 128, 128, 0.546);
-        font-weight: 600;
-        border-radius: 6px;
-        border: 0;
+       
     }
     h1{
         font-size: $primaryFont;
@@ -116,9 +130,11 @@ $topNavItemColor: #d1d1d1;
     // ***************Access button*****************
 .access-button {
     color:$fontColor;
+    font-weight: 700;
+    letter-spacing: 10px;
     position: relative;
     height: 50px;
-    padding: 0 40px;
+    padding: 0px 30px;
     border: 3px solid #fff;
     background: #3b3f3d;
     user-select: none;
@@ -234,5 +250,31 @@ $topNavItemColor: #d1d1d1;
     }
 
 }
+
+
+
+//trending section
+.trending-section{
+    background: $primaryBg;
+    height: 100%;
+.trending-header {
+    @include flex-content;
+    padding: 50px 60px;
+    h2{
+        font-size: $primaryFont;
+    }
+    button{
+        @include button;
+        padding: 10px 30px;
+    }
+}
+
+.trending-cards{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+
+}
+}
+// trending header
 
 
