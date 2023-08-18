@@ -15,7 +15,7 @@ function displayProduct(data) {
     const div = document.createElement("div");
     div.innerHTML = `
  <div>
-   <img src=${product.img} alt="product-img">
+   <img class='card-img' src=${product.img} alt="product-img">
    <button class="badge">${product.badge}</button>
    <div class="card-text">
     <h4>${product.Description}</h4>
