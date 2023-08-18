@@ -1,9 +1,10 @@
 
 $fontColor:#fff;
 $skew-amount: 4deg;
+$primaryFont:35px;
 $topNavItemColor: #d1d1d1;
 :root {
-    font-family: sans-serif;
+    font-family: poppins;
     color: $fontColor;
 }
 
@@ -36,8 +37,11 @@ $topNavItemColor: #d1d1d1;
     align-items: center;
     gap: 20px;
 }
+// brand logo
+.brand-logo img {
+    width: 150px;
 
-
+}
 // for background Image
 .bg-container {
     background: url('/public/img/background-img.png');
@@ -53,66 +57,122 @@ $topNavItemColor: #d1d1d1;
     .content {
        transform:(skew(0deg, -3deg));
     }
-    main{
-        @include flex-content;
-    transform: (skew(0deg, -3deg));
-    }
-}
-
-.brand-logo img{
-    width: 150px;
-   
-}
-// navbar content 
-.navbar-content{
-   @include flex-content;
-   padding: 0px 30px;
-
- .nav-item{
-
-    @include flex-content;
-    flex-direction: column;
-    row-gap: 20px;
-    .top-item{
-        @include flex-content;  
-        li a{
-            color: $topNavItemColor; 
-        }
-    }
-    
-  
-    .main-item{
-        @include flex-content;
-        @include nav-item;
-      
-     div {
-        @include flex-content;
-        padding: 0px 40px
-     }
-        button{
-            @include searchButton;
-        }
-        li a{
+        // ******************main section*************
+        main {
             @include flex-content;
-            gap: 5px;
-            
-        }
-        i{
-            @include icon;
-            
-        }
+            justify-content: center;
+            transform: (skew(0deg, -3deg));
+            padding: 50px 100px;
+
+    .top-badge{
+        color: $fontColor;
+        padding: 5px 10px;
+        background: rgba(128, 128, 128, 0.546);
+        font-weight: 600;
+        border-radius: 6px;
+        border: 0;
     }
-   }
-    div li {
-    list-style: none
-   }
-   div li a{
-    text-decoration: none;
-    color: $fontColor;
-   }
+    h1{
+        font-size: $primaryFont;
+        padding: 20px 0;
+        width: 60%;
+    }
+    .bottom-section{
+      @include flex-content;
+      justify-content: start;
+      font-size: $primaryFont;
     
+    }
+    
+    .badge{
+        position: relative;
+        color:$fontColor;
+        font-size: 16px;
+        font-weight: 600;
+        background:#ff5400 ;
+        border-radius: 5px;
+        padding: 8px 12px;
+        border:0;
+        // height: 100%;
+        transform: (skew(25deg, 0deg));
+    }
+    .badge::after{
+        position: absolute;
+        content: '';
+        background: #ff5400;
+        border-radius: 5px;
+        padding: 0px 20px;
+        top: 0;
+        left: -10px;
+        border: 0;
+        z-index: -1;
+        height: 100%;
+        transform: (skew(-25deg, 0deg));
+    }
+    .badge p{
+        transform: (skew(-25deg, 0deg));
+    }
+
+        }
 }
 
-// ******************main section*************
+
+
+// navbar content 
+.navbar-content {
+    @include flex-content;
+    padding: 0px 30px;
+
+    .nav-item {
+
+        @include flex-content;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .top-item {
+            @include flex-content;
+
+            li a {
+                color: $topNavItemColor;
+            }
+        }
+
+
+        .main-item {
+            @include flex-content;
+            @include nav-item;
+
+            div {
+                @include flex-content;
+                padding: 0px 40px
+            }
+
+            button {
+                @include searchButton;
+            }
+
+            li a {
+                @include flex-content;
+                gap: 5px;
+
+            }
+
+            i {
+                @include icon;
+
+            }
+        }
+    }
+
+    div li {
+        list-style: none
+    }
+
+    div li a {
+        text-decoration: none;
+        color: $fontColor;
+    }
+
+}
 
 
