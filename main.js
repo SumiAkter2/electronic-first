@@ -1,35 +1,21 @@
-// document.querySelector("#app").innerHTML = `
-//   <div>
-//     <a href="https://vitejs.dev" target="_blank">
+console.log("from  main.js .dddddddddddddddddddd");
 
-//     </a>
-//     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-
-//     </a>
-//     <h1>Hello Vite!</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite logo to learn more
-//     </p>
-//   </div>
-// `;
-
-// setupCounter(document.querySelector("#counter"));
-
-console.log("from  main.js ");
-
-function loadProduct() {
-  const url = "product.json";
-  fetch(url)
+function loadData() {
+  fetch("product.json")
     .then((res) => res.json())
     .then((data) => {
-      data.forEach((product) => {
-        console.log(product);
-        `   
-    <div class="card">
-   <img src="" alt="product-img">
+      console.log(data);
+      displayProduct(data);
+    });
+}
+
+function displayProduct(data) {
+  const section = document.getElementById("trending-card");
+  for (const product of data) {
+    const div = document.createElement("div");
+    div.innerHTML = `
+ <div>
+   <img src=${product.img} alt="product-img">
    <button class="badge">${product.badge}</button>
    <div class="card-text">
     <h4>${product.Description}</h4>
@@ -37,8 +23,7 @@ function loadProduct() {
    </div>
    </div>
    `;
-      });
-    });
+    section.appendChild(div);
+  }
 }
-document.getElementById("trending-cards").innerHTML = product;
-loadProduct();
+loadData();
