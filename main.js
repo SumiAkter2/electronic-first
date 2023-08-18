@@ -16,10 +16,10 @@ function displayProduct(data) {
     div.innerHTML = `
  <div>
    <img class='card-img' src=${product.img} alt="product-img">
-   <button class="badge">${product.badge}</button>
+   <button class="badge" style="top:-30px; left:10px"><p>${product.badge}</p></button>
    <div class="card-text">
     <h4>${product.Description}</h4>
-    <p> euro</p>
+    <p> ${product.euro}</p>
    </div>
    </div>
    `;

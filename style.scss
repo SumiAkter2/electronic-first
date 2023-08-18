@@ -98,33 +98,7 @@ body{
     
     }
     
-    .badge{
-        position: relative;
-        color:$fontColor;
-        font-size: 16px;
-        font-weight: 600;
-        background:#ff5400 ;
-        border-radius: 5px;
-        padding: 8px 12px;
-        border:0;
-        transform: (skew(25deg, 0deg));
-    }
-    .badge::after{
-        position: absolute;
-        content: '';
-        background: #ff5400;
-        border-radius: 5px;
-        padding: 0px 20px;
-        top: 0;
-        left: -10px;
-        border: 0;
-        z-index: -1;
-        height: 100%;
-        transform: (skew(-25deg, 0deg));
-    }
-    .badge p{
-        transform: (skew(-25deg, 0deg));
-    }
+    
 
 
     // ***************Access button*****************
@@ -192,7 +166,35 @@ body{
         }
 }
 
+.badge {
+    position: relative;
+    color: $fontColor;
+    font-size: 16px;
+    font-weight: 600;
+    background: #ff5400;
+    border-radius: 5px;
+    padding: 8px 12px;
+    border: 0;
+    transform: (skew(25deg, 0deg));
+}
 
+.badge::after {
+    position: absolute;
+    content: '';
+    background: #ff5400;
+    border-radius: 5px;
+    padding: 0px 20px;
+    top: 0;
+    left: -10px;
+    border: 0;
+    z-index: -1;
+    height: 100%;
+    transform: (skew(-25deg, 0deg));
+}
+
+.badge p {
+    transform: (skew(-25deg, 0deg));
+}
 
 // navbar content 
 .navbar-content {
@@ -267,6 +269,7 @@ body{
         @include button;
         padding: 10px 30px;
     }
+
 }
 
 #trending-card{ 
@@ -275,12 +278,17 @@ body{
     gap: 40px;
     margin: 0 auto;
     padding:0 10rem;
-}
-}
-.card-img{
-width: 320px;
-height: 150px;
-border-radius: 10px;
+
+    .card-img {
+        width: 320px;
+        height: 150px;
+        border-radius: 10px;
+    }
+    .card-text{
+@include flex-content;
+    }
 }
 
 
+
+}
