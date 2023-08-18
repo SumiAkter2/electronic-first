@@ -53,6 +53,10 @@ $topNavItemColor: #d1d1d1;
     .content {
        transform:(skew(0deg, -3deg));
     }
+    main{
+        @include flex-content;
+    transform: (skew(0deg, -3deg));
+    }
 }
 
 .brand-logo img{
@@ -108,6 +112,7 @@ $topNavItemColor: #d1d1d1;
    }
     
 }
- .top-item:hover{
-    color:#0a1419
- }
+
+// ******************main section*************
+
+
