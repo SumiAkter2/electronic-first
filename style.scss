@@ -1,6 +1,12 @@
 $fontColor:#fff;
 $skew-amount: 4deg;
-$main-color: #00B285;
+
+@mixin flex-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
 :root {
     font-family: sans-serif;
      color:$fontColor; 
@@ -11,33 +17,7 @@ $main-color: #00B285;
     box-sizing: border-box;
 }
 
-// .container{
-//     width: 100%;
-//     height: 500px;
-//     background: url('/public/img/background-img.png');
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     position: relative;
-    
- 
-// }
-
-// .container::after{
-//     position: absolute;
-//     content: '';
-//     background: inherit;
-//     top: 0;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     width: 100%;
-//     height: 100%;
-//     z-index: -1;
-//     transform-origin: left bottom;
-//     transform: skewY($skew-amount);
-//     overflow: hidden;
-// }
+// for background Image
 .bg-container {
     background: url('/public/img/background-img.png');
     background-position: center;
@@ -45,10 +25,44 @@ $main-color: #00B285;
     background-size: cover;
     height: 100vh;
     width: 100%;
+    padding: 50px 0;
     transform:(skew(0deg, 3deg));
     margin-top: -70px;
 
     .content {
        transform:(skew(0deg, -3deg));
+    }
+}
+
+.brand-logo img{
+    width: 150px;
+   
+}
+.navbar-content{
+   @include flex-content;
+   padding: 0px 30px;
+
+ .nav-item{
+    @include flex-content;
+    flex-direction: column;
+    row-gap: 30px;
+    .top-item{
+        @include flex-content;   
+    }
+    .main-item{
+        @include flex-content;
+    }
+   }
+    div li {
+    
+    list-style: none
+   }
+   div li a{
+    text-decoration: none;
+    color: $fontColor;
+   }
+    .icon{
+       @include flex-content;
+       
     }
 }
