@@ -207,7 +207,7 @@ body{
         flex-direction: column;
         row-gap: 20px;
 
-        .top-item {
+        .top-nav-item {
             @include flex-content;
 
             li a {
@@ -216,13 +216,20 @@ body{
         }
 
 
-        .main-item {
+        .main-nav-item {
             @include flex-content;
             @include nav-item;
 
             div {
                 @include flex-content;
-                padding: 0px 40px
+                padding: 0px 40px;
+                .dropdown-item
+                .dropdown-item div{
+                    display: grid;
+                }
+                .dropdown-item div button img {
+                        width: 20px;
+                    }
             }
 
             button {
@@ -233,6 +240,8 @@ body{
                 @include flex-content;
                 gap: 5px;
 
+               
+               
             }
 
             i {
@@ -254,11 +263,13 @@ body{
 }
 
 
-
 //trending section
 .trending-section{
     background: $primaryBg;
-    height: 100%;
+    height: 100%; 
+    margin-bottom: 100px;
+
+    // trending header 
 .trending-header {
     @include flex-content;
     padding: 5rem 10rem;
@@ -271,24 +282,62 @@ body{
     }
 
 }
-
+// trending card
 #trending-card{ 
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
     gap: 40px;
     margin: 0 auto;
     padding:0 10rem;
-
+// card img
     .card-img {
         width: 320px;
         height: 150px;
         border-radius: 10px;
     }
     .card-text{
-@include flex-content;
+      @include flex-content;
+      
     }
 }
 
+}
+// phone
+@media only screen and (max-width:560px) {
+    .navbar-content{
+        .nav-item{
+        
+            display: hidden;
+        }
+        
+    }
+    .trending-section{
+        .trending-header{
+            padding: 5rem 12rem;
+        }
+    #trending-card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        margin: 10px auto;
+    }
+    }
+    
+}
+// tablet
+@media only screen and (max-width:768px) {
+    .trending-section {
+        #trending-card {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
-
+}
+// desktop
+@media only screen and (min-width: 768px) {
+.trending-section {
+        #trending-card {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }
