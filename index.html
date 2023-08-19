@@ -33,140 +33,37 @@
                    <li><a href="/">Support 24/7</a></li>
                   </div>
                   <!-- main nav item -->
-                  <div class="main-nav-item">
+                  <div id="main-nav-items" class="main-nav-item">
                      
                     <ul >
-                      <li ><a ><i class="fa-solid fa-desktop icon"></i> PC <i class="fa-solid fa-angle-down"></i> 
-                        <div>
+                      <li id="add-button"><a ><i class="fa-solid fa-desktop icon"></i> PC <i class="fa-solid fa-angle-down"></i> 
+                       
                           <!-- drop -->
-                          <div class="dropdown-content">
-                            
-                          
-                            <div class="dropdown-header">
-                              <h4>Platform </h4>
-                              
-                             <p>view all</p>
-                            </div>
-                            <div class="dropdown-item">
-                              <p>
-                                <img src="/public/img/icon/steam.png" alt="icon-logo"> Steam
-                              </p>
-                            <p>
-                                <img src="/public/img/icon/ubisoft.png" alt="icon-logo"> Ubisoft Connect
-                              </p>
-                                <p>
-                                <img src="/public/img/icon/ea.png" alt="icon-logo"> EA App
-                              </p>
-                              <p>
-                                <img src="/public/img/icon/battle.jpg" alt="icon-logo"> Battle.net
-                              </p>
-                              <p>
-                                <img src="/public/img/icon/rockstar.png" alt="icon-logo">RockStar
-                              </p> 
-                              <p>
-                                <img src="/public/img/icon/gog.png" alt="icon-logo"> GOG.com
-                              </p>
-                              <p>
-                                <img src="/public/img/icon/Microsoft_logo.svg.png" alt="icon-logo"> Microsoft Store
-                              </p>
-                              <p>
-                                <img src="/public/img/icon/epic.png" alt="icon-logo"> Epic
-                              </p>
-                            </div>
-                          
-                            <div class="dropdown-header">
-                              <h4>Prepaid Cards </h4>
-                              <p>View all</p>
-                             
-                            </div>
-                            <div class="dropdown-bottom-item">
-                              <p>
-                                <img src="/public/img/icon/steam.png" alt="icon-logo"> Steam Gift Cards
-                              </p>
-                              <p>
-                                <img src="/public/img/icon/download-removebg-preview.png" alt="icon-logo"> IG Gift Cards
-                              </p>
-                              <p>
-                                <img src="/public/img/icon/blizzard-removebg-preview.png" alt="icon-logo" style="width: 80px;"> Blizzard Gift
-                                Cards
-                              </p>
-                            </div>
-                          
-                          
-                          </div> 
-                        </div>
+                         
                       </a>
                       
                      </li>
-                      <li><a href=""><i class="fa-brands fa-playstation"></i> Playstation <i class="fa-solid fa-angle-down"></i><div>
-                        <!-- drop -->
-                        <div class="dropdown-content">
-                      
-                          <div class="dropdown-header">
-                            <h4>Platform </h4>
-                      
-                            <p>view all</p>
-                          </div>
-                          <div class="dropdown-item">
-                            <p>
-                              <img src="/public/img/icon/steam.png" alt="icon-logo"> Steam
-                            </p>
-                            <p>
-                              <img src="/public/img/icon/ubisoft.png" alt="icon-logo"> Ubisoft Connect
-                            </p>
-                            <p>
-                              <img src="/public/img/icon/ea.png" alt="icon-logo"> EA App
-                            </p>
-                            <p>
-                              <img src="/public/img/icon/battle.jpg" alt="icon-logo"> Battle.net
-                            </p>
-                            <p>
-                              <img src="/public/img/icon/rockstar.png" alt="icon-logo">RockStar
-                            </p>
-                            <p>
-                              <img src="/public/img/icon/gog.png" alt="icon-logo"> GOG.com
-                            </p>
-                            <p>
-                              <img src="/public/img/icon/Microsoft_logo.svg.png" alt="icon-logo"> Microsoft Store
-                            </p>
-                            <p>
-                              <img src="/public/img/icon/epic.png" alt="icon-logo"> Epic
-                            </p>
-                          </div>
-                      
-                          <div class="dropdown-header">
-                            <h4>Prepaid Cards </h4>
-                            <p>View all</p>
-                      
-                          </div>
-                          <div class="dropdown-bottom-item">
-                            <p>
-                              <img src="/public/img/icon/steam.png" alt="icon-logo"> Steam Gift Cards
-                            </p>
-                            <p>
-                              <img src="/public/img/icon/download-removebg-preview.png" alt="icon-logo"> IG Gift Cards
-                            </p>
-                            <p>
-                              <img src="/public/img/icon/blizzard-removebg-preview.png" alt="icon-logo" style="width: 80px;"> Blizzard Gift
-                              Cards
-                            </p>
-                          </div>
-                      
-                      
-                        </div>
-                      </div> </a> 
+                      <li><a ><i class="fa-brands fa-playstation"></i> Playstation 
+                    </a> 
                       </li>
-                      <li><a href=""> <i class="fa-brands fa-xbox"></i>Xbox </a></li>
-                      <li><a href=""><i class="fa-solid fa-gamepad"></i> Nintendo </i></a></li>
+                      <li><a > <i class="fa-brands fa-xbox"></i>Xbox </a></li>
+                      <li><a><i class="fa-solid fa-gamepad"></i> Nintendo </i></a></li>
                     </ul>
                  
-                    <button onclick="searchButtonActive()" type="button" class="search-button">
+
+
+
+                    <button  id="hide-button" type="button" class="search-button">
                       <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <div id="search-container">
+                    
+                    <div id="dropdown-contents" class="dropdown-content">
                     
                     </div>
-                   
+                  </div>
+                  <!-- added search field -->
+                  <div id="search-container">
+                  
                   </div>
                 </div>
        <div >
@@ -209,47 +106,9 @@
  
   </section>
 
-<!-- ********************search full button -->
-  <!-- <div class="search-content">
-
-  <div class="search">
-    <input type="text" class="search__input" placeholder="Minecraft, RPG, multiplayer... ">
-    <button>Advanced Search</button>
-  </div>
-  <button class="x-button">
-  <i class="fa-solid fa-x"></i>
-  </button>
-
-  </div> -->
 
 
-  <!-- javascript link -->
 
-<script>
-
-
-  
-  function searchButtonActive() {
-    //  document.getElementsByClassName('left-section').style.display = none;
-    const section= document.getElementById('search-container');
-    const div = document.createElement("div");
-
-    div.innerHTML = `
-    <div class="search-content">
-    <div class="search">
-    <input type="text" class="search__input" placeholder="Minecraft, RPG, multiplayer... ">
-    <buttons>Advanced Search</buttons>
-    </div>
-    <buttons class="x-buttons">
-    <i class="fa-solid fa-x"></i>
-    </button>
-    </div>
-    `
-    section.appendChild(div);
-    console.log("search");
-  }
- 
-</script>
 
     <script type="module" src="/main.js"></script>
     <!-- font awesome link -->
