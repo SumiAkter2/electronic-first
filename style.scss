@@ -304,13 +304,14 @@ body{
                }
                 li a:hover div{
                display:block;
-                // top:40px;
+                
                 }
            }
             
 
             button {
                 @include searchButton;
+                cursor: pointer;
             }
 
         
@@ -400,7 +401,7 @@ body{
                      
                      }
 
-            button {
+            buttons {
                     background: transparent;
                     color: $fontColor;
                     border: none;

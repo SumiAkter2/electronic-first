@@ -1,14 +1,19 @@
-console.log("from  main.js .dddddddddddddddddddd");
+// console.log("from  main.js .dddddddddddddddddddd");
+// console.log("Allah Help me please ");
 
+
+
+
+// fetch product form product.json
 function loadData() {
   fetch("product.json")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       displayProduct(data);
     });
 }
-
+// show product
 function displayProduct(data) {
   const section = document.getElementById("trending-card");
   for (const product of data) {

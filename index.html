@@ -34,12 +34,13 @@
                   </div>
                   <!-- main nav item -->
                   <div class="main-nav-item">
-                   
+                     
                     <ul >
-                      <li><a href="/"><i class="fa-solid fa-desktop icon"></i> PC <i class="fa-solid fa-angle-down"></i> 
+                      <li ><a ><i class="fa-solid fa-desktop icon"></i> PC <i class="fa-solid fa-angle-down"></i> 
                         <div>
                           <!-- drop -->
                           <div class="dropdown-content">
+                            
                           
                             <div class="dropdown-header">
                               <h4>Platform </h4>
@@ -92,7 +93,7 @@
                             </div>
                           
                           
-                          </div>
+                          </div> 
                         </div>
                       </a>
                       
@@ -159,14 +160,14 @@
                       <li><a href=""><i class="fa-solid fa-gamepad"></i> Nintendo </i></a></li>
                     </ul>
                  
+                    <button onclick="searchButtonActive()" type="button" class="search-button">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div id="search-container">
                     
-                      <button class="search-button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-              
+                    </div>
+                   
                   </div>
-
-  
                 </div>
        <div >
       <i class="fa-solid fa-cart-shopping" style="font-size: 25px; padding-right: 20px;"></i>
@@ -208,8 +209,8 @@
  
   </section>
 
-
-  <div class="search-content">
+<!-- ********************search full button -->
+  <!-- <div class="search-content">
 
   <div class="search">
     <input type="text" class="search__input" placeholder="Minecraft, RPG, multiplayer... ">
@@ -219,7 +220,36 @@
   <i class="fa-solid fa-x"></i>
   </button>
 
-  </div>
+  </div> -->
+
+
+  <!-- javascript link -->
+
+<script>
+
+
+  
+  function searchButtonActive() {
+    //  document.getElementsByClassName('left-section').style.display = none;
+    const section= document.getElementById('search-container');
+    const div = document.createElement("div");
+
+    div.innerHTML = `
+    <div class="search-content">
+    <div class="search">
+    <input type="text" class="search__input" placeholder="Minecraft, RPG, multiplayer... ">
+    <buttons>Advanced Search</buttons>
+    </div>
+    <buttons class="x-buttons">
+    <i class="fa-solid fa-x"></i>
+    </button>
+    </div>
+    `
+    section.appendChild(div);
+    console.log("search");
+  }
+ 
+</script>
 
     <script type="module" src="/main.js"></script>
     <!-- font awesome link -->
