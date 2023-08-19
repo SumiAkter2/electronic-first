@@ -10,6 +10,7 @@ function hideElement() {
   }
   const section = document.getElementById("search-container");
   const div = document.createElement("div");
+
   div.innerHTML = `
     <div class="search-content">
     <div class="search">
@@ -27,9 +28,8 @@ const hideButton = document.getElementById("hide-button");
 hideButton.addEventListener("click", hideElement);
 
 // added dropdown
-let isElementAdded = false;
+
 function addDropdown() {
-  console.log("add");
   const section = document.getElementById("dropdown-contents");
   const div = document.createElement("div");
   div.innerHTML = `
@@ -54,7 +54,7 @@ function addDropdown() {
                               </p>
                               <p>
                                 <img src="/public/img/icon/rockstar.png" alt="icon-logo">RockStar
-                              </p> 
+                              </p>
                               <p>
                                 <img src="/public/img/icon/gog.png" alt="icon-logo"> GOG.com
                               </p>
@@ -85,11 +85,12 @@ function addDropdown() {
                             </div>
                           
                           
-                          </div> 
+                          </div>
                           </div>
 
   `;
   section.appendChild(div);
+  isElementAdded = true;
 }
 const addButton = document.getElementById("add-button");
 addButton.addEventListener("click", addDropdown);
