@@ -58,7 +58,6 @@ body{
 // brand logo
 .brand-logo img {
     width: 150px;
-
 }
 // for background Image
 .bg-container {
@@ -94,7 +93,7 @@ body{
     }
     h1{
         font-size: $primaryFont;
-        padding: 20px 0;
+        padding: 30px 0;
         width: 60%;
     }
     .bottom-section{
@@ -208,7 +207,10 @@ body{
 .navbar-content {
     @include flex-content;
     padding: 0px 30px;
-
+ 
+    .menubar-content{
+        display: none;
+    }
     .nav-item {
        
         @include flex-content;
@@ -216,7 +218,6 @@ body{
         flex-direction: column;
         row-gap: 20px;
 
-       // drop-drown item
     
         .top-nav-item {
             @include flex-content;
@@ -430,25 +431,52 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 // phone
 @media only screen and (max-width:560px) {
     .navbar-content{
-        .nav-item{
-        
-            display: hidden;
+        .card-item {
+                display: none;
+            }
+        .menubar-content{
+            display: block;
         }
-        
+        .nav-item {
+            .top-nav-item{
+                display: none;
+            }
+             
+        .main-nav-item ul{
+            display: grid;
+         li a{
+            display: flex;
+         }
+        }
+
+        }
+        .search-button{
+            width: 50px;
+            border-radius: 5px;
+        }
     }
+
+
+    // banner content
+    
+    .bg-container{
+   
+    main{
+        display: block;
+        h1 {
+                width: 100%;
+            }
+                        .access-button {
+                            margin-top: 40px;
+                            height: 30px;
+                            letter-spacing: 5px;
+                        }
+    }}
+
+
     .trending-section{
         .trending-header{
             padding: 5rem 12rem;
@@ -464,6 +492,21 @@ body{
 }
 // tablet
 @media only screen and (max-width:768px) {
+    // banner content
+   .bg-container{
+     main {
+            display: block;
+           h1{
+            width: 100%;
+           }
+            .access-button{
+                margin-top: 40px;
+                height: 40px;
+                letter-spacing: 5px;
+            }
+        }}
+  
+
     .trending-section {
         #trending-card {
             grid-template-columns: repeat(2, 1fr);
