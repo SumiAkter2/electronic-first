@@ -417,7 +417,7 @@ body {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background: #0c0101;
+    background: rgb(252, 12, 12);
   }
 }
 
@@ -441,9 +441,9 @@ body {
         .search__input {
           position: absolute;
           top: 80px;
-          left: -250px;
-          width: 350px;
-          margin: 0 10px;
+          left: -200px;
+          width: 320px;
+          margin: 0 auto;
         }
       }
       buttons {
@@ -458,7 +458,7 @@ body {
         cursor: pointer;
         margin-left: 0;
         top: 130px;
-        right: 0px;
+        left: 30px;
       }
     }
     .nav-item {

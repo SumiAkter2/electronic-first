@@ -1,3 +1,11 @@
+// **********************  hamburger bar ****************************
+const hamburger = document.getElementById("hamburgers");
+const navMenu = document.getElementById("main-nav-items");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
 // hide nav and display input field;
 function hideElement() {
   const elementToHide = document.getElementById("main-nav-items");
@@ -24,8 +32,13 @@ function hideElement() {
   const innerButton = document.getElementById("x-button");
   innerButton.addEventListener("click", () => {
     section.removeChild(div);
-    elementToHide.style.display = "flex";
-    console.log("allah");
+    if (window.innerWidth < 480) {
+      // Apply styles for small screens
+      elementToHide.style.display = "grid";
+    } else if (window.innerWidth > 760) {
+      // Apply styles for larger screens
+      elementToHide.style.display = "flex";
+    }
   });
 }
 const hideButton = document.getElementById("hide-button");
@@ -131,12 +144,3 @@ function displayProduct(data) {
   }
 }
 loadData();
-
-// **********************  hamburger bar ****************************
-const hamburger = document.getElementById("hamburgers");
-const navMenu = document.getElementById("main-nav-items");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
