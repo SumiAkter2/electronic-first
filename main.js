@@ -1,4 +1,3 @@
-console.log("Allah Help me please ");
 // hide nav and display input field;
 function hideElement() {
   const elementToHide = document.getElementById("main-nav-items");
@@ -17,10 +16,17 @@ function hideElement() {
     </div>
     <buttons id="x-button" class="x-buttons">
     <i class="fa-solid fa-x"></i>
-    </button>
+    </buttons>
     </div>
     `;
   section.appendChild(div);
+  // display input field
+  const innerButton = document.getElementById("x-button");
+  innerButton.addEventListener("click", () => {
+    section.removeChild(div);
+    elementToHide.style.display = "flex";
+    console.log("allah");
+  });
 }
 const hideButton = document.getElementById("hide-button");
 hideButton.addEventListener("click", hideElement);
@@ -97,17 +103,6 @@ function addDropdown() {
 }
 addButton.addEventListener("click", addDropdown);
 
-
-// function SearchButtonBack() {
-//   console.log("back");
-//   const inputField = document.getElementById("search-container");
-//   inputField.style.display = none;
-//   const backElement = document.getElementById("main-nav-items");
-//   backElement.style.display = block;
-// }
-// const backElements = document.getElementById("x-button");
-// backElements.addEventListener("click", SearchButtonBack);
-
 // fetch product form product.json
 function loadData() {
   fetch("product.json")
@@ -137,7 +132,7 @@ function displayProduct(data) {
 }
 loadData();
 
-// **********************  menu bar: ****************************
+// **********************  hamburger bar ****************************
 const hamburger = document.getElementById("hamburgers");
 const navMenu = document.getElementById("main-nav-items");
 
