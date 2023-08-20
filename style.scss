@@ -512,6 +512,7 @@ body {
 
     .dropdown-content {
       width: 300px;
+      top: 60px;
       .dropdown-item {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -584,6 +585,18 @@ body {
       }
     }
   }
+//   navbar content
+.navbar-content{
+    .nav-item{
+        .main-nav-item{
+            ul li a{
+             @include flex-content;
+             flex-direction: column;
+             gap: 0;
+            }
+        }
+    }
+}
 
   .trending-section {
     margin-top: 40px;
