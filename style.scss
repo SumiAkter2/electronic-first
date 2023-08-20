@@ -536,7 +536,7 @@ body {
       }
       .access-button {
         margin-top: 40px;
-        height: 30px;
+        height: 50px;
         letter-spacing: 5px;
       }
     }
@@ -556,13 +556,13 @@ body {
       grid-template-columns: repeat(1, 1fr);
       margin: auto;
       padding: 10px;
+      .card-img {
+        width: 300px;
+      }
 
       .card-text {
         justify-content: start;
         padding: 0;
-      }
-      img {
-        width: 50px;
       }
     }
   }
@@ -594,9 +594,6 @@ body {
       margin: 0;
       padding: 10px;
 
-      img {
-        width: 50px;
-      }
       .card-text {
         justify-content: start;
         padding: 0;
