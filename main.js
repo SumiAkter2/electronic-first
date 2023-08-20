@@ -9,7 +9,6 @@ function hideElement() {
   }
   const section = document.getElementById("search-container");
   const div = document.createElement("div");
-
   div.innerHTML = `
     <div class="search-content">
     <div class="search">
@@ -26,12 +25,19 @@ function hideElement() {
 const hideButton = document.getElementById("hide-button");
 hideButton.addEventListener("click", hideElement);
 
-// added dropdown
-
+// added dropdown:
+const section = document.getElementById("dropdown-contents");
+const addButton = document.getElementById("add-button");
 function addDropdown() {
-  const section = document.getElementById("dropdown-contents");
-  const div = document.createElement("div");
-  div.innerHTML = `
+  const innerDiv = document.getElementById("innerDiv");
+  if (innerDiv) {
+    // If it's present, remove it
+    section.removeChild(innerDiv);
+    console.log("remove");
+  } else {
+    const div = document.createElement("div");
+    div.id = "innerDiv";
+    div.innerHTML = `
    <div>
     <div class="dropdown-header">
         <h4>Platform </h4>
@@ -85,11 +91,12 @@ function addDropdown() {
 </div>
 
   `;
-  section.appendChild(div);
-  isElementAdded = true;
+    section.appendChild(div);
+    console.log("add");
+  }
 }
-const addButton = document.getElementById("add-button");
 addButton.addEventListener("click", addDropdown);
+
 
 // function SearchButtonBack() {
 //   console.log("back");
@@ -130,7 +137,6 @@ function displayProduct(data) {
 }
 loadData();
 
-
 // **********************  menu bar: ****************************
 const hamburger = document.getElementById("hamburgers");
 const navMenu = document.getElementById("main-nav-items");
@@ -139,4 +145,3 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
-
