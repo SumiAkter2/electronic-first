@@ -33,10 +33,9 @@ function addDropdown() {
   const section = document.getElementById("dropdown-contents");
   const div = document.createElement("div");
   div.innerHTML = `
-                         <div>
+   <div>
     <div class="dropdown-header">
         <h4>Platform </h4>
-
         <p>view all</p>
     </div>
     <div class="dropdown-item">
@@ -66,11 +65,11 @@ function addDropdown() {
         </p>
     </div>
 
-    <div class="drpngeopdown-header">
+    <div class="dropdown-header">
         <h4>Prepaid Cards </h4>
         <p>View all</p>
-
     </div>
+
     <div class="dropdown-bottom-item">
         <p>
             <img src="https://i.ibb.co/kGT5651/steam.png" alt="icon-logo"> Steam Gift Cards
@@ -84,8 +83,6 @@ function addDropdown() {
             Cards
         </p>
     </div>
-
-
 </div>
 
   `;
@@ -122,7 +119,7 @@ function displayProduct(data) {
     div.innerHTML = `
  <div>
    <img class='card-img' src=${product.img} alt="product-img">
-   <button class="badge" style="top:-30px; left:10px"><p>${product.badge}</p></button>
+   <button class="badge"  style="top:-30px; left:10px position:absolute"><p>${product.badge}</p></button>
    <div class="card-text">
     <h4>${product.Description}</h4>
     <p> ${product.euro}</p>

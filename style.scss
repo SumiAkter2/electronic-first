@@ -178,9 +178,10 @@ body{
     font-size: 16px;
     font-weight: 600;
     background: #ff5400;
-    border-radius: 5px;
-    padding: 8px 12px;
+    border-radius: 7px;
+    padding: 8px 10px;
     border: 0;
+    margin-left: 4px;
     transform: (skew(25deg, 0deg));
 }
 
@@ -192,6 +193,7 @@ body{
     padding: 0px 20px;
     top: 0;
     left: -10px;
+    margin-left: 5px ;
     border: 0;
     z-index: -1;
     height: 100%;
@@ -438,7 +440,7 @@ body{
 
 
 // phone
-@media only screen and (max-width:560px) {
+@media all and (max-width: 480px) {
     .navbar-content{
           
         .menubar-content{
@@ -531,7 +533,7 @@ body{
     // banner content
     
     .bg-container{
-   
+    height: 100%;
     main{
         display: block;
         h1 {
@@ -544,23 +546,37 @@ body{
                         }
     }}
 
-
+.badge{
+left: 0;
+}
     .trending-section{
-       
+        margin: 60px 0;
+        .trending-header {
+            justify-content: start;
+            padding: 10px;
+            margin-bottom: 40px;
+            }
     #trending-card {
         grid-template-columns: repeat(1, 1fr);
         margin:auto;
+        padding: 10px;
+        
+        .card-text{
+            justify-content: start;
+            padding: 0;
+        }
         img {
-                width: 150px;
+                width: 50px;
             }
     }
     }
     
 }
 // tablet
-@media only screen and (max-width:768px) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
     // banner content
    .bg-container{
+    height: 100%;
      main {
             display: block;
            h1{
@@ -576,34 +592,59 @@ body{
 
     .trending-section {
         margin-top: 40px;
+        padding: 0;
+
         #trending-card {
             grid-template-columns: repeat(2, 1fr);
             margin: 0;
+            padding: 10px;
             
          img{
-            width: 150px;
+            width: 50px;
          }
+                 .card-text {
+                     justify-content: start;
+                     padding: 0;
+                 }
         }
     }
 
 }
 
-@media only screen and (max-width:992px){
-.trending-section {
-        #trending-card {
-            grid-template-columns: repeat(2, 1fr);
-            margin: 0;
-            img {
-                    width: 150px;
-                }
-        }
-    }
-}
+// @media only screen and (min-width:992px){
+// .trending-section {
+//         #trending-card {
+//             grid-template-columns: repeat(2, 1fr);
+//             margin: 0;
+//             padding: 10px;
+//             img {
+//                     width: 150px;
+//                 }
+//                 .card-text{
+//                  justify-content: start;
+//                  padding: 0; 
+//                 }
+//         }
+//     }
+// }
 // desktop
-@media only screen and (min-width: 768px) {
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    .bg-container{
+        height: 100%;
+
+        
+        .main {
+        @include flex-content;
+             .access-button{
+                height: 50px;
+             }
+        }
+       
+    }
 .trending-section {
         #trending-card {
             grid-template-columns: repeat(3, 1fr);
+           padding: 0 10rem;
         
         }
     }
