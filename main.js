@@ -138,6 +138,5 @@ const navMenu = document.getElementById("main-nav-items");
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
-  console.log("sumi");
 });
 

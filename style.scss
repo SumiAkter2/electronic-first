@@ -364,6 +364,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+
     .search__input {
       width: 400px;
       outline: none;
@@ -409,16 +410,17 @@ body {
 .hamburger {
   display: none;
   cursor: pointer;
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #0c0101;
+  }
 }
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background: #000;
-}
+
 // phone
 @media all and (max-width: 480px) {
   .navbar-content {
@@ -434,7 +436,31 @@ body {
     .hamburger.active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
-
+    .search-content {
+      .search {
+        .search__input {
+          position: absolute;
+          top: 80px;
+          left: -250px;
+          width: 350px;
+          margin: 0 10px;
+        }
+      }
+      buttons {
+        position: absolute;
+        cursor: pointer;
+        margin-left: 0;
+        top: 80px;
+        left: 0px;
+      }
+      .x-buttons {
+        position: absolute;
+        cursor: pointer;
+        margin-left: 0;
+        top: 130px;
+        right: 0px;
+      }
+    }
     .nav-item {
       .top-nav-item {
         display: none;
@@ -481,6 +507,15 @@ body {
       }
       .main-nav-item.active {
         left: 0;
+      }
+    }
+
+    .dropdown-content {
+      width: 300px;
+      .dropdown-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
       }
     }
     .card-item {
