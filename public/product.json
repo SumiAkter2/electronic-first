@@ -4,20 +4,20 @@
     "euro": "19.99 €",
     "Description": "Sengoku Dynasty",
     "badge": "-26%",
-    "img": "../public/img/sengoku.webp"
+    "img": "https://i.ibb.co/GxYfKLy/sengoku.webp"
   },
   {
     "id": 2,
     "euro": "30.99 €",
     "Description": "The Sims 4 Horse Ranch",
     "badge": "-23%",
-    "img": "../public/img/horse-ranch.jpg"
+    "img": "https://i.ibb.co/4mT2rWT/horse-ranch.jpg"
   },
   {
     "id": 3,
     "euro": "34.89 €",
     "Description": "Remnant 2",
     "badge": "-30%",
-    "img": "../public/img/remnant.jpg"
+    "img": "https://i.ibb.co/0qnPSrw/remnant.jpg"
   }
 ]
