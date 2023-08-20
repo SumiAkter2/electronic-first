@@ -1,4 +1,3 @@
-// console.log("from  main.js .dddddddddddddddddddd");
 console.log("Allah Help me please ");
 // hide nav and display input field;
 function hideElement() {
@@ -130,3 +129,15 @@ function displayProduct(data) {
   }
 }
 loadData();
+
+
+// **********************  menu bar: ****************************
+const hamburger = document.getElementById("hamburgers");
+const navMenu = document.getElementById("main-nav-items");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  console.log("sumi");
+});
+

@@ -200,9 +200,6 @@ body {
   @include flex-content;
   padding: 0px 30px;
 
-  .menubar-content {
-    display: none;
-  }
   .nav-item {
     @include flex-content;
     align-items: center;
@@ -249,6 +246,9 @@ body {
       }
     }
   }
+  //   .card-item{
+  //     display: flex;
+  //   }
 }
 .dropdown-content {
   top: 40px;
@@ -404,38 +404,35 @@ body {
   }
 }
 
+// hambuger::afte
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #000;
+}
 // phone
 @media all and (max-width: 480px) {
   .navbar-content {
-    .menubar-content {
+    .hamburger {
       display: block;
-      position: absolute;
-      right: 20px;
-      top: 10px;
-      cursor: pointer;
-
-      #check {
-        display: none;
-        #icons {
-          display: inline-flex;
-          transition: 0.3s;
-        }
-      }
-      .menu-icon {
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      .close-icon {
-        display: none;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      #check:checked ~ #icons .menu-icon {
-        display: none;
-      }
-      #check:checked ~ #icons .close-icon {
-        display: block;
-      }
+    }
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
     }
 
     .nav-item {
@@ -449,10 +446,11 @@ body {
         align-items: center;
         width: 100%;
         position: absolute;
-        left: 0px;
-        top: -500px;
+        left: -100%;
+        top: 80px;
         border-radius: 5px;
         padding: 30px;
+        transition: 0.3s;
         z-index: 20;
 
         button {
@@ -481,17 +479,14 @@ body {
           }
         }
       }
+      .main-nav-item.active {
+        left: 0;
+      }
     }
-
     .card-item {
       display: none;
     }
   }
-  #check:checked ~ .navbar-content.nav-item.main-nav-item {
-    top: 50px;
-  }
-
-  // banner content
 
   .bg-container {
     height: 100%;
