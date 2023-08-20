@@ -1,5 +1,4 @@
 $fontColor: #fff;
-$skew-amount: 4deg;
 $primaryFont: 35px;
 $topNavItemColor: #d1d1d1;
 $primaryBg: #272727;
@@ -18,12 +17,13 @@ $primaryBg: #272727;
 body {
   background: $primaryBg;
 }
-
+// for nav-item
 @mixin nav-item {
   font-size: 15px;
   background-image: linear-gradient(to right, #0a1419, #2f3d47);
   border-radius: 30px;
 }
+// for search button
 @mixin searchButton {
   background-image: linear-gradient(#fe4c19, #fe7505);
   padding: 22px;
@@ -31,6 +31,7 @@ body {
   border: 0;
   color: $fontColor;
 }
+//for only button
 @mixin button {
   color: $fontColor;
   cursor: pointer;
@@ -70,7 +71,7 @@ body {
     transform: (skew(0deg, -3deg));
     margin-top: 50px;
   }
-  // ******************main section*************
+  // ******************main section in banner text content*************
   main {
     @include flex-content;
     justify-content: center;
@@ -162,7 +163,7 @@ body {
     }
   }
 }
-
+// for badge
 .badge {
   position: relative;
   color: $fontColor;
@@ -246,10 +247,9 @@ body {
       }
     }
   }
-  //   .card-item{
-  //     display: flex;
-  //   }
 }
+
+// for dropdown menu
 .dropdown-content {
   top: 40px;
   position: absolute;
@@ -316,7 +316,7 @@ body {
     border-radius: 2rem;
   }
 }
-//trending section
+//************trending section*******************************
 .trending-section {
   background: $primaryBg;
   height: 100%;
@@ -405,7 +405,7 @@ body {
   }
 }
 
-// hamburger
+//******************** hamburger****************
 
 .hamburger {
   display: none;
@@ -421,8 +421,9 @@ body {
   }
 }
 
-// phone
+//media query for  phone
 @media all and (max-width: 480px) {
+  // for phone:nav bar
   .navbar-content {
     .hamburger {
       display: block;
@@ -436,6 +437,7 @@ body {
     .hamburger.active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
+    // phone:search
     .search-content {
       .search {
         .search__input {
@@ -461,13 +463,13 @@ body {
         left: 30px;
       }
     }
+    //phone: nav-item
     .nav-item {
       .top-nav-item {
         display: none;
       }
 
       .main-nav-item {
-        // height: 0;
         display: grid;
         align-items: center;
         width: 100%;
@@ -509,7 +511,7 @@ body {
         left: 0;
       }
     }
-
+    //for phone: dropdown
     .dropdown-content {
       width: 300px;
       top: 60px;
@@ -523,7 +525,7 @@ body {
       display: none;
     }
   }
-
+  // for phone:bg-container:
   .bg-container {
     height: 100%;
     main {
@@ -542,10 +544,12 @@ body {
       }
     }
   }
+  //   for phone:badge
 
   .badge {
     left: 0;
   }
+  //   for phone:trending section
   .trending-section {
     margin: 60px 0;
     .trending-header {
@@ -570,7 +574,7 @@ body {
 }
 // tablet
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  // banner content
+  //tablet: banner content
   .bg-container {
     height: 100%;
     main {
@@ -578,6 +582,7 @@ body {
       h1 {
         width: 100%;
       }
+      //   tablet:access button
       .access-button {
         margin-top: 40px;
         height: 40px;
@@ -585,19 +590,19 @@ body {
       }
     }
   }
-//   navbar content
-.navbar-content{
-    .nav-item{
-        .main-nav-item{
-            ul li a{
-             @include flex-content;
-             flex-direction: column;
-             gap: 0;
-            }
+  // tablet:  navbar content
+  .navbar-content {
+    .nav-item {
+      .main-nav-item {
+        ul li a {
+          @include flex-content;
+          flex-direction: column;
+          gap: 0;
         }
+      }
     }
-}
-
+  }
+  // tablet: trending section:
   .trending-section {
     margin-top: 40px;
     padding: 0;
@@ -615,24 +620,9 @@ body {
   }
 }
 
-// @media only screen and (min-width:992px){
-// .trending-section {
-//         #trending-card {
-//             grid-template-columns: repeat(2, 1fr);
-//             margin: 0;
-//             padding: 10px;
-//             img {
-//                     width: 150px;
-//                 }
-//                 .card-text{
-//                  justify-content: start;
-//                  padding: 0;
-//                 }
-//         }
-//     }
-// }
 // desktop
 @media all and (min-width: 1024px) and (max-width: 1280px) {
+  // desktop:bg-container
   .bg-container {
     height: 100%;
 
@@ -643,6 +633,7 @@ body {
       }
     }
   }
+  //   desktop :trending section:
   .trending-section {
     #trending-card {
       grid-template-columns: repeat(3, 1fr);

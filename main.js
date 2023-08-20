@@ -6,7 +6,7 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
-// hide nav and display input field;
+//----------------- hide nav and display input field-----------------;
 function hideElement() {
   const elementToHide = document.getElementById("main-nav-items");
   elementToHide.style.display = "none";
@@ -44,7 +44,7 @@ function hideElement() {
 const hideButton = document.getElementById("hide-button");
 hideButton.addEventListener("click", hideElement);
 
-// added dropdown:
+// ----------------------added dropdown-----------------------------:
 const section = document.getElementById("dropdown-contents");
 const addButton = document.getElementById("add-button");
 function addDropdown() {
@@ -116,7 +116,7 @@ function addDropdown() {
 }
 addButton.addEventListener("click", addDropdown);
 
-// fetch product form product.json
+//----------------- fetch product form product.json------------------------------------------------------------
 function loadData() {
   fetch("product.json")
     .then((res) => res.json())
