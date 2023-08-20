@@ -358,6 +358,7 @@ body {
   @include flex-content;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
 
   .search {
     @include flex-content;
@@ -478,7 +479,7 @@ body {
         top: 80px;
         border-radius: 5px;
         padding: 30px;
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         z-index: 20;
 
         button {
@@ -521,7 +522,7 @@ body {
         gap: 10px;
       }
     }
-    .card-item {
+    .cart-item {
       display: none;
     }
   }
@@ -633,6 +634,7 @@ body {
       }
     }
   }
+
   //   desktop :trending section:
   .trending-section {
     #trending-card {
